@@ -1,7 +1,7 @@
 Python script that reads an `.ods` (libreoffice calc) with an offset-file list and transform it to a `numpy` array in the following format:
 
 ```python
-    N rows and [offset, file]
+    np.array([[offset, file]])
 ```
 
 A typical ODS spreadsheet file might look like this:
@@ -12,11 +12,13 @@ A typical ODS spreadsheet file might look like this:
 | 431003010 | 154   |
 
 It will return an array like:
-array([['111000000',
-        '/lustre/ap/litv-exp/2021-05-00_E143_TwoPhotonDeday_ssanjari/NTCAP/iq/IQ_2021-05-10_00-14-45/0000054.iq.tdms'],
-['431003010',
-        '/lustre/ap/litv-exp/2021-05-00_E143_TwoPhotonDeday_ssanjari/NTCAP/iq/IQ_2021-05-10_00-14-45/0000154.iq.tdms']])
+```python
 
+    array([['111000000',
+            '/lustre/ap/litv-exp/2021-05-00_E143_TwoPhotonDeday_ssanjari/NTCAP/iq/IQ_2021-05-10_00-14-45/0000054.iq.tdms'],
+    ['431003010',
+          '/lustre/ap/litv-exp/2021-05-00_E143_TwoPhotonDeday_ssanjari/NTCAP/iq/IQ_2021-05-10_00-14-45/0000154.iq.tdms']])
+```
 
 ## Installation
 Clone this repository with:
