@@ -9,8 +9,7 @@ A typical ODS spreadsheet file might look like this:
 | OFFSETS   | INDEX |
 |-----------|-------|
 | 111000000 | 54    |
-|-----------|-------|
-| 431003010 | 154    |
+| 431003010 | 154   |
 
 It will return an array like:
 array([['111000000',
